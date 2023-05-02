@@ -31,6 +31,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class MouseController : MonoBehaviour 
 {
@@ -49,6 +51,9 @@ public class MouseController : MonoBehaviour
     private bool grounded;
     private bool dead = false;
     private uint coins = 0;
+
+    public Text coinsLabel;
+
 
     void Start () 
     {
@@ -115,6 +120,8 @@ public class MouseController : MonoBehaviour
         coins++;
         Destroy(coinCollider.gameObject);
         AudioSource.PlayClipAtPoint(coinCollectSound, transform.position);
+        coinsLabel.text = coins.ToString();
+
     }
 
     void OnGUI() 
