@@ -161,7 +161,7 @@ public class MouseController : MonoBehaviour
 
     public void ExitToMenu()
     {
-        SceneManager.LoadScene("New Scene");
+        SceneManager.LoadScene("MenuScene");
     }
 
 
